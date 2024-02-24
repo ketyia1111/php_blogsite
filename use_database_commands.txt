@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS blogs;
+
+
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    mailadd VARCHAR(255),
+    password VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE login_sessions (
+    login_id INT PRIMARY KEY,
+    user_id INT,
+    session VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
