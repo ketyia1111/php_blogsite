@@ -9,13 +9,14 @@
 
 <body>
     <h2>ユーザ登録</h2>
-    <form id="registerForm" action="./user_regist_confirm.html">
+    <form id="registerForm" action="#next" method="post">
+        <p>#error</p>
         <label for="name">名前:</label><br>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name" value=":name:"><br>
         <label for="mail">メールアドレス:</label><br>
-        <input type="email" id="mail" name="mail"><br>
+        <input type="email" id="mail" name="mail" value=":mail:"><br>
         <label for="password">パスワード:</label><br>
-        <input type="password" id="password" name="password"><br>
+        <input type="password" id="password" name="password" value=":password:"><br>
         <input type="submit" value="登録">
     </form>
 </body>
